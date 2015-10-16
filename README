@@ -1,0 +1,74 @@
+This is a "plugin" for the Video Disk Recorder (VDR).
+
+Written by:                  Patrick Gniza <pgniza@gmx.de>
+
+Project's homepage:          -
+
+Latest version available at: -
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+See the file COPYING for more information.
+
+Requirements:
+
+  LG TV with RS-232 interface
+
+Description:
+
+  Control LG TV via RS-232
+
+Features:
+
+ - auto powercontrol
+ - auto volumecontrol
+ - auto switch 3D mode (3dcontrol plugin needed)
+
+Configuration:
+
+ OSD - Auto TV Power On / Off
+          enable/disable TV Powercontrol switch on/off TV
+
+ OSD - Set User inactive if TV is Off
+          control TV Powerstatus to set user inactive
+
+ OSD - LG Volume Control
+          enable/disable TV Volumecontrol
+
+ OSD - LG Basevolume
+          TV default Volumelevel if VDR volume is lower than 
+          the increaselevel option
+
+ OSD - VDR Increaselevel
+
+ Commandline - "-d  DEV  --device=DEV"
+          Set user define serialport default = /dev/ttyUSB0
+
+aviable commands via plugin service:
+
+ - LG_Disable3D
+ - LG_SideBySide3D
+ - LG_SideBySide3DLR
+ - LG_TopBottom3D
+ - LG_CheckBoard3D
+ - LG_FrameSequential3D
+ - LG_Converted2D
+ - LG_SetVolume
+ - LG_GetVolume
+ - LG_PowerOff
+ - LG_PowerOn
+ - LG_TogglePower
+ - LG_GetCurrentPowerStatus
+ - LG_ToggleMute
+ - LG_IsMute
+ - LG_ToggleRemoteLocked
+ - LG_IsRemoteLocked
+
+aviable commands via SVDRP:
+
+ - LGTV [ ON | OFF ]
+ - LG3D [ OFF | SBS | SBSRL | SBSLR | TB | FS | CB | 2D ]
+ - LVOL [ <number> | + | - | MUTE ]
+ - LGAV [ AV ]
